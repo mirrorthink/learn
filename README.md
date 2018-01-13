@@ -1,4 +1,6 @@
 # learn
+>下面的文章都是我在学习过程各处收集来的，目的是为了更好的查阅
+
 - [Markdown——入门指南](https://www.jianshu.com/p/q81RER)
 - [阮一峰es6电子书](http://es6.ruanyifeng.com)
 - [笔试面经网](https://www.nowcoder.com)
@@ -39,7 +41,7 @@
 >对于强制缓存，服务器通知浏览器一个缓存时间，在缓存时间内，下次请求，直接用缓存，不在时间内，执行比较缓存策略。
 对于比较缓存，将缓存信息中的Etag和Last-Modified通过请求发送给服务器，由服务器校验，返回304状态码时，浏览器直接使用缓存。
 #### webpack 原理
-> 一切皆为模块，由于webpack并不支持除.js以外的文件，从而需要使用loader转换成webpack支持的模块，plugin用于扩展webpack的功能，在webpack构建生命周期的过程在合适的时机做了合适的事情。
+> 一切皆为模块，由于webpack并不支持除.js以外的文件，从而需要使用loader转换成webpack支持的模块，plugin用于扩展webpack的功能，在webpack构建生命周期的过程在合适的时机做了合适的事情。[webpack教程推荐](http://array_huang.coding.me/webpack-book/chapter0/preface.html)
 ##### Webpack从构建到输出文件结果的过程：
 > 1. 解析配置参数，合并从shell传入和webpack.config.js文件的配置信息，输出最终的配置信息
 > 2. 注册配置中的插件，好让插件监听webpack构建生命周期中的事件节点，做出对应的反应
