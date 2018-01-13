@@ -23,11 +23,11 @@
 对于强制缓存来说，响应header中会有两个字段来标明失效规则（Expires/Cache-Control）
 > - Expires到期时间是由服务端生成的，但是客户端时间可能跟服务端时间有误差，这就会导致缓存命中的误差。
 > - Cache-Control 是最重要的规则。常见的取值有private、public、no-cache、max-age，no-store，默认为private。
- > private:             客户端可以缓存
-   public:              客户端和代理服务器都可缓存（前端的同学，可以认为public和private是一样的）
-   max-age=xxx:   缓存的内容将在 xxx 秒后失效
-   no-cache:          需要使用对比缓存来验证缓存数据（后面介绍）
-   no-store:           所有内容都不会缓存，强制缓存，对比缓存都不会触发
+   1. private:             客户端可以缓存
+   2. public:              客户端和代理服务器都可缓存（前端的同学，可以认为public和private是一样的）
+   3. max-age=xxx:   缓存的内容将在 xxx 秒后失效
+   4. no-cache:          需要使用对比缓存来验证缓存数据（后面介绍）
+   5. no-store:           所有内容都不会缓存，强制缓存，对比缓存都不会触发
 ###对比缓存
 ，顾名思义，需要进行比较判断是否可以使用缓存。
 浏览器第一次请求数据时，服务器会将缓存标识与数据一起返回给客户端，客户端将二者备份至缓存数据库中。
