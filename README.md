@@ -12,18 +12,17 @@
 >共同点：都是保存在浏览器端，且同源的。
 区别：cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递；cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。
 而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
-- 数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用- - 作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
-- 作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
+> - 数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此 用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
+> - 作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
 如果您在cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击
 
 
->
 [http缓存相关](https://www.cnblogs.com/chenqf/p/6386163.html)
 ##### 强制缓存
 >如果生效，不需要再和服务器发生交互，而对比缓存不管是否生效，都需要与服务端发生交互。两类缓存规则可以同时存在，强制缓存优先级高于对比缓存
 对于强制缓存来说，响应header中会有两个字段来标明失效规则（Expires/Cache-Control）
-- Expires到期时间是由服务端生成的，但是客户端时间可能跟服务端时间有误差，这就会导致缓存命中的误差。
-- Cache-Control 是最重要的规则。常见的取值有private、public、no-cache、max-age，no-store，默认为private。
+> - Expires到期时间是由服务端生成的，但是客户端时间可能跟服务端时间有误差，这就会导致缓存命中的误差。
+> - Cache-Control 是最重要的规则。常见的取值有private、public、no-cache、max-age，no-store，默认为private。
  > private:             客户端可以缓存
    public:              客户端和代理服务器都可缓存（前端的同学，可以认为public和private是一样的）
    max-age=xxx:   缓存的内容将在 xxx 秒后失效
