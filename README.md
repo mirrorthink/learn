@@ -18,7 +18,7 @@
 作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
 如果您在cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击
 >sss
->ss ###辅导费胜多负少
+> ###辅导费胜多负少###
 >
 [http缓存相关](https://www.cnblogs.com/chenqf/p/6386163.html)
 >###强制缓存
