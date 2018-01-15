@@ -52,5 +52,6 @@
 #### css 左侧固定 右侧自适应
 >这种方法我采用的是左边浮动，右边加上一个margin-left值，让他实现左边固定，右边自适应的布局效果
 position：
-
+#### Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）
+##### Jasmine是单元测试框架
  
