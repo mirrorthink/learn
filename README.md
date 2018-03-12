@@ -92,5 +92,14 @@ CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
 ͭ> 通过app.use 将  中间件加入队列 app.stack=[] 数组队列 中间件实现一个next方法 ，取出中间件并执行，同时传入当前方法以实现递归调用，达到持续触发的目的。
 
 #### css 一侧定宽，一侧自适应，且高度自适应 均为100% 
-父元素 绝对定位 且固定宽高，若高度相对屏幕，则可不设置宽高，直接设置top、bottom、left、right的值。左元素设定宽，左浮动，高100%，右边元素设置margin-left，高100%
+> 父元素 绝对定位 且固定宽高，若高度相对屏幕，则可不设置宽高，直接设置top、bottom、left、right的值。左元素设定宽，左浮动，高100%，右边元素设置margin-left，高100%
+
+#### bind 与call、apply的区别
+> bind是引用（不会马上执行），call、apply就是直接执行调用函数
+#### ajax原理
+>  xmlhttp = new XmlHttpRequest();
+
+#### w3c事件机制
+> 任何事件首先向下传播直到遇到目标元素，然后再向上冒泡返回
+阻止事件冒泡，阻止默认事件，event.stopPropagation()和event.preventDefault()，return false
  
