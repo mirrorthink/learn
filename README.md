@@ -102,4 +102,10 @@ CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
 #### w3c事件机制
 > 任何事件首先向下传播直到遇到目标元素，然后再向上冒泡返回
 阻止事件冒泡，阻止默认事件，event.stopPropagation()和event.preventDefault()，return false
- 
+
+#### module.exports= 与 exports.world = 的区别
+> require的是模块的exports对象
+module.exports = Hello  将export对象指向了 Hello ， 其接口对象就是要输出的 Hello 对象本身，而不是原先的 exports 这样使用：
+var Hello = require('./hello'); hello = new Hello(); 
+exports.world = function(){}，则是将方法挂载到了exports对象上 使用 时是这样子 var hello = require('./hello'); hello.world();
+
